@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block about %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Done !</strong> {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<div style="    padding: 28px; ">
+                                                                                                 
+
+  <div class="row">
+    {% for data in alldata %}
+    <div class="col-sm-6" style="    padding-top: 29px;">
+      <div class="card">
+        <div class="card-body">
+          <img src="{{ data[3]}}">
+          <h5 class="card-title">Name = {{data[0]}} </h5>
+          <h5 class="card-title">Email = {{data[1]}} </h5>
+          <h5 class="card-title">Message= {{data[2]}} </h5>
+          <!-- <p> class="card-title">Message :{{data[2]}}. </p> -->
+          <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+          <div style="display: flex;
+          justify-content: space-evenly;
+          padding-top: 35px;">
+            <a type="submit" href="/c" class="btn btn-primary">Go Contact Us</a>
+
+
+
+            
+            <form action="/showupdate/{{data[0]}}" method="post">
+              <button type="submit" href="" class="btn btn-secondary"> Go Update</button>
+            </form>
+
+            <form action="/r/{{data[0]}}" method="post">
+              <button type="submit" href="" class="btn btn-danger">Go Remove</button>
+            </form>
+          </div >
+        </div>
+      </div>
+    </div >
+    {% endfor %}
+  </div>
+
+    {% endblock about %}

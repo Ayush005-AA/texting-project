@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block abb %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <div class="container">
+        <h2>Our Story</h2>
+        <p>
+            This is where you can tell your website visitors about your company's history, mission, and values. Share your journey, milestones, and what sets your organization apart.
+        </p>
+
+        <h2>Our Team</h2>
+        <p>
+            Introduce your team members, their roles, and their backgrounds. You can include photos and brief descriptions of each team member.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+            Provide contact information, such as an email address, phone number, and office address. You can also include a contact form for visitors to get in touch with you.
+        </p>
+    </div>
+</body>
+</html>
+
+
+{% endblock abb %}

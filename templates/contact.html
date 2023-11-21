@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block about %}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="container">
+        <h2>Contact Information</h2>
+        <p>
+            Here, you can provide your contact details, such as an email address, phone number, and office address. Feel
+            free to include a map if your business has a physical location.
+        </p>
+
+        <h2>Contact Form</h2>
+        <p>
+            Visitors can use the contact form below to send you a message. Make sure to handle the form submission on
+            your server.
+        </p>
+
+        <form action="/s" method="post" enctype="multipart/form-data">
+            <div class="contact-form">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required> </textarea>
+
+
+                <label for="email">Upload your image:</label>
+                <input type="file" id="email" name="img" required>
+
+                <button type="submit">Submit</button>
+        </form>
+        </form>
+
+
+        {% endblock about %}
